@@ -18,15 +18,15 @@ import matplotlib.pyplot as plt
 #Start by setting the parameters:
 
 
-N_x = 9           #Number of sites in x-direction of the square lattice
+N_x = 10           #Number of sites in x-direction of the square lattice
 N_y = 10            #Number of sites in y-direction of the square lattice
 
 t = 1               #hopping strength. We recommend to set this to 1 and view it as an energy scale.
 t_prime = -0.0      #nearest neighbour hopping strength.
 
-U = 4              #local Hubbard U (interaction strength). 3 is a moderate coupling
+U = 3             #local Hubbard U (interaction strength). 3 is a moderate coupling
 
-n_filling = 1-1./9.     #The enforced average filling of the system. n_filling = 1 corresponds to half-filling.
+n_filling = 0.9     #The enforced average filling of the system. n_filling = 1 corresponds to half-filling.
                     #n_filling = 0.9 corresponds to 10% hole doping.
 
 T = 0.0            #Temperature T. We again recommend to set t=1, so T is in units of t.
