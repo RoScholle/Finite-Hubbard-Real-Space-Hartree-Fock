@@ -71,7 +71,7 @@ QuantumNumbers = []     #We can see this as the labels of the rows and columns o
 
 for i in range(N_y):        #The order of these loops matters, because this way we enumerate the sites
     for j in range(N_x):    #from left to right an THEN from low to up. 
-        for s in (1,-1):
+        for s in (1,-1):    #We label up spins with 1 and down spins with -1.
             QuantumNumbers.append([j,i,s]) 
 
 
