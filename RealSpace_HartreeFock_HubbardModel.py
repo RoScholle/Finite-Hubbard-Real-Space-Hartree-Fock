@@ -295,6 +295,8 @@ def Next_Gap_Vector(GapVector,GetEnergy=False,ReturnBoth = False,ReturnSpectral 
 
 #This is a primitive function to plot the spin configuration given a Gapvector.
 #It rotates the spins so that the (0,0) spin points upwards and then plots a cut through the x-y-plane.
+#The arrows point in the direction of the x,y components of the spin, however their length is proportional
+#to the full local spin, not just the x and y component.
 #Since the spins can also have a z-component, this function should be viewed to get a first impression on 
 #how the spins are aranged (in particular, if they ae collinear), not to see the precise pattern.
 def Plot_Arrows(GapVector):
@@ -302,9 +304,6 @@ def Plot_Arrows(GapVector):
     N_downs = GapVector[N_tot:2*N_tot] 
     D_UpDowns = GapVector[2*N_tot:3*N_tot] + 1j*GapVector[3*N_tot:]
 
-
-    Pol = N_ups-N_downs
-    Pol = Pol.reshape(N_y,N_x)
     Filling = N_ups+N_downs
     Filling = Filling.reshape(N_y,N_x)
     
